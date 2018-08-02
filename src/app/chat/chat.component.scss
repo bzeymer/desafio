@@ -1,28 +1,14 @@
 .main-screen {
     width: 100%;
-    height: 100%;
-    display: grid;
-    grid-template-columns: 1fr 9fr;
-    grid-template-rows: 9fr 2fr;
-    grid-template-areas:
-    "users messages"
-    "users messages"
-    "users commands";
-}
-
-app-users {
-    grid-area: users;
-}
-
-app-messages {
-    grid-area: messages;
+    height: auto;
+    display: flex;
+    flex-direction: column;
 }
 
 app-commands {
-    grid-area: commands;
+    height: 40px;
+    position: fixed;
+    bottom: 30px;
+    left: 0;
+    right: 0;
 }
-
-div {
-    height: 100%; width: 100%;
-}
-  

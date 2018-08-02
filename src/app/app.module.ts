@@ -1,15 +1,17 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatIconModule, MatToolbarModule } from '@angular/material';
+import { MatButtonModule, MatInputModule, MatFormFieldModule, MatToolbarModule, MatIconModule } from '@angular/material';
+
+import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { ChatComponent } from './chat/chat.component';
-import { UsersComponent } from './chat/users/users.component';
 import { MessagesComponent } from './chat/messages/messages.component';
 import { CommandsComponent } from './chat/commands/commands.component';
+import { MessageComponent } from './chat/messages/message/message.component';
 
 
 @NgModule({
@@ -18,15 +20,19 @@ import { CommandsComponent } from './chat/commands/commands.component';
     HeaderComponent,
     FooterComponent,
     ChatComponent,
-    UsersComponent,
     MessagesComponent,
-    CommandsComponent
+    CommandsComponent,
+    MessageComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    MatIconModule,
-    MatToolbarModule
+    FormsModule,
+    MatButtonModule,
+    MatToolbarModule,
+    MatFormFieldModule,
+    MatInputModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]

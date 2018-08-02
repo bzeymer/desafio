@@ -9,6 +9,7 @@
     padding: 0;
     margin: 0;
     color: $primary-text-color;
+    overflow: hidden;
 }
 
 app-header {
@@ -21,3 +22,5 @@ app-chat {
 app-footer {
     height: 30px;
 }
+
+

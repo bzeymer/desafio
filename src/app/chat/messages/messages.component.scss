@@ -1,4 +1,25 @@
-div {
-    height: 100%; width: 100%;
+@import '../../../shared/colors.scss';
+
+ul {
+    padding: 0;
+    margin: 0;
+    display: block;
+    height: 535px;
+    overflow-y: scroll;
 }
-  
+
+::-webkit-scrollbar {
+    width: 7px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+}
+ 
+::-webkit-scrollbar-thumb {
+    background: $primary-color-light; 
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: $primary-color; 
+}

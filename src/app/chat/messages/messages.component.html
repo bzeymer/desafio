@@ -1,1 +1,3 @@
-<div>MESSAGES</div>
+<ul #messagesList>
+    <app-message *ngFor="let message of messages" [text]="message.text"></app-message>
+</ul>
