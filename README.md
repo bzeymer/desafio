@@ -1,31 +1,22 @@
 ## Desafio front-end
 
-Este desafio é parte do processo seletivo para o cargo de Desenvolvedor Front-end no Clipping, cuja vaga está descrita [neste link](http://ajuda.clippingcacd.com.br/vagas/oportunidade-para-desenvolvedor-no-clipping).
+O desafio foi realizado com Angular 6, pois ele permite de uma forma simples a evolução do sistema por meio de componentes (similiar a outros frameworks).
 
-O teste é focado em design de código e conhecimento de orientação a objetos. O objetivo é avaliar sua experiência em escrever um código de fácil manutenção, baixo acoplamento e alta coesão.
+Para atender o requisito futuro de envio de mensagens por ajax e long-polling, o serviço de controle do chat é independente dos componentes, sendo que a comunicação serviço -> componente, se dá via [RxJS Subject](https://rxjs-dev.firebaseapp.com/api/index/class/Subject).
 
+Convido-os a visitar um pequeno [projeto](https://github.com/bzeymer/node-chat-app) que desenvolvi que se trata exatamente de uma aplicação de chat, na qual não utilizei frameworks no front-end, porém o back-end foi feito com WebSockets e  NodeJS. Uma live demo deste projeto está disponível em <https://node-chatterson.herokuapp.com/>
 
-### Apresentação do problema
+### Instalação
 
-O arquivo `index.html` contém o esqueleto de uma aplicação de chat totalmente *bare-bones*: uma `<ul>` com uma lista de mensagens enviadas, e um `<button>` + `<input>` para envio de novas mensagens.
+A aplicação requer [Node.js](https://nodejs.org/) v8+ para rodar.
 
-A feature inicial de nossa aplicação é bastante simples: o usuário deve poder 
-entrar uma mensagem na caixa de texto e, ao apertar o botão "Enviar" (ou 
-pressionar <kbd>Enter</kbd>), a mensagem deverá aparecer na lista de mensagens.
+Baixe o código do repositório;
 
-Isoladamente, essa é uma feature simples de implementar, mas queremos que você 
-leve em conta a evolução futura do software. Imagine que o app irá crescer em 
-features, e adicionar coisas como:
-* envio de mensagens via ajax, com as respostas vindo via `long-polling`
-* chat em realtime via WebRTC ou Firebase
+Instale as dependências e rode a aplicação;
 
-**Você deve pensar num design de código que suporte esses casos de uso sem grandes modificações.**
+```sh
+$ npm install
+$ ng serve
+```
 
-IMPORTANTE: Não é necessário integrar o código ao backend! O software deve ser estruturado de forma que seja fácil integrar com diferentes estratégias de backend, mas, neste desafio, **o backend não precisa ser implementado**.
-
-### Avaliação
-
-Para nos enviar seu código, você pode fazer um fork desse repositório e nos mandar um pull-request.
-
-### Créditos
-Adaptado de https://github.com/Creditas/challenge
+Acesse <http://localhost:4200>
